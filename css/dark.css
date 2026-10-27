@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Swastik Estate Luxury Dark Theme Enhancements & Glow System
+   ========================================================================== */
+
+:root {
+  --dk-bg: #0a0b0e;
+  --dk-surface: #12131b;
+  --dk-card: #151620;
+  --dk-line: rgba(197, 160, 89, 0.25);
+  --dk-line-subtle: rgba(255, 255, 255, 0.08);
+  --dk-text: #f5f2eb;
+  --dk-mute: #a8a297;
+  --gold-l: #e2c17a;
+}
+
+/* Ambient glow system on all sections */
+.dk,
+.lt,
+section {
+  position: relative;
+  isolation: isolate;
+  background: var(--dk-bg);
+  color: var(--dk-text);
+  overflow: hidden;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+.dk.alt,
+section:nth-of-type(even) {
+  background: #0f1017;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  top: -200px;
+  right: -200px;
+  background: radial-gradient(closest-side, rgba(197, 160, 89, 0.08), transparent);
+}
+
+.glow-l::before {
+  right: auto;
+  left: -200px;
+}
+
+/* Enforce dark typography across all headings & descriptions */
+.dk .h2,
+.lt .h2,
+section .h2 {
+  color: #ffffff;
+}
+
+.dk .lead,
+.lt .lead,
+section .lead {
+  color: var(--dk-mute);
+}
+
+.dk .eyebrow,
+.lt .eyebrow,
+section .eyebrow {
+  color: var(--gold-l);
+}
+
+/* Card surfaces */
+.dk .feat,
+.lt .feat,
+.feat {
+  background: var(--dk-card);
+  border: 1.5px solid var(--dk-line);
+}
+
+.dk .why-cards,
+.lt .why-cards,
+.why-cards {
+  background: var(--dk-card);
+  border: 1.5px solid var(--dk-line);
+}
+
+.dk .form-card,
+.lt .form-card,
+.form-card {
+  background: var(--dk-card);
+  border: 1.5px solid var(--dk-line);
+}
+
+.dk .expert,
+.lt .expert,
+.expert {
+  background: var(--dk-card);
+  border: 1.5px solid var(--dk-line);
+}
+
+.dk .contact-panel,
+.lt .contact-panel,
+.contact-panel {
+  background: var(--dk-card);
+  border: 1.5px solid var(--dk-line);
+}
+
+.dk .faq-help,
+.lt .faq-help,
+.faq-help {
+  background: var(--dk-card);
+  border: 1.5px solid var(--dk-line);
+}
+
+.dk .faq details,
+.lt .faq details,
+.faq details {
+  background: var(--dk-card);
+  border: 1.5px solid var(--dk-line);
+}
+
+.dk .step,
+.lt .step,
+.step {
+  background: var(--dk-card);
+  border: 1.5px solid var(--dk-line);
+}
+
+.dk .tip,
+.lt .tip,
+.tip {
+  background: var(--dk-card);
+  border: 1.5px solid var(--dk-line);
+}
+
+/* Hover glow states */
+.feat:hover,
+.why-cards:hover,
+.form-card:hover,
+.contact-panel:hover,
+.faq-help:hover {
+  border-color: rgba(197, 160, 89, 0.45);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 35px rgba(197, 160, 89, 0.1);
+}
