@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function () {
             backToTopBtn.classList.remove('active');
         }
 
-        if (window.scrollY > 50) {
-            header.style.boxShadow = '0 6px 25px rgba(0, 0, 0, 0.45)';
+        if (window.scrollY > 40) {
+            header.classList.add('scrolled');
         } else {
-            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.25)';
+            header.classList.remove('scrolled');
         }
     });
 

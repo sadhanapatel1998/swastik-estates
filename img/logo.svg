@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e90ff"/>
+      <stop offset="100%" stop-color="#0052cc"/>
+    </linearGradient>
+  </defs>
+  <!-- Architectural Icon -->
+  <g transform="translate(10, 8)">
+    <rect x="0" y="0" width="64" height="64" rx="14" fill="url(#logoGrad)"/>
+    <path d="M32 10 L52 28 L52 54 L12 54 L12 28 Z" fill="#ffffff" fill-opacity="0.95"/>
+    <path d="M26 54 L26 34 L38 34 L38 54 Z" fill="url(#logoGrad)"/>
+    <polygon points="32,15 46,28 18,28" fill="#1e90ff"/>
+  </g>
+  <!-- Text Brand -->
+  <text x="88" y="38" font-family="'Oswald', 'Montserrat', 'Arial', sans-serif" font-weight="700" font-size="28" fill="#ffffff" letter-spacing="2">SWASTIK</text>
+  <text x="88" y="58" font-family="'Montserrat', 'Arial', sans-serif" font-weight="600" font-size="14" fill="#38bdf8" letter-spacing="4">ESTATES</text>
+</svg>
