@@ -225,6 +225,9 @@ h4 {
   pointer-events: none;
 }
 
+
+
+
 .hero-content-container {
   position: relative;
   z-index: 2;
@@ -246,6 +249,9 @@ h4 {
   text-transform: uppercase;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
+
+
+
 
 .hero-subtitle-clean {
   font-family: var(--sub-heading-font);
@@ -1039,6 +1045,12 @@ textarea.form-control-dark.is-valid {
 }
 
 @media (max-width: 767.98px) {
+  .service-desc {
+    font-size: 1.3rem;
+  }
+  .navbar {
+    padding: .5rem 0;
+}
   .hero-section {
     min-height: 48vh;
   }
@@ -1047,7 +1059,7 @@ textarea.form-control-dark.is-valid {
     overflow-x: clip !important;
   }
   .hero-title-main {
-    font-size: 3rem;
+    font-size: 3.8rem;
     letter-spacing: 2px;
   }
   .hero-social-img {
