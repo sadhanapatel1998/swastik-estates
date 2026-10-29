@@ -1039,6 +1039,9 @@ textarea.form-control-dark.is-valid {
 }
 
 @media (max-width: 767.98px) {
+  .hero-section {
+    min-height: 48vh;
+  }
   html,
   body {
     overflow-x: clip !important;
@@ -1080,7 +1083,7 @@ textarea.form-control-dark.is-valid {
     font-size: 0.88rem;
   }
   .firm-image {
-    height: 280px;
+    height: 210px;
   }
   .area-img {
     height: 190px;
@@ -1089,4 +1092,13 @@ textarea.form-control-dark.is-valid {
   .carousel-control-next {
     display: none;
   }
+  .hero-subtitle-clean {
+    padding: 6px 0px;
+  }
+  .testimonial-text {
+    line-height: 1.5;
+  }
+  .navbar-collapse {
+    background-color: #010238;
+}
 }
