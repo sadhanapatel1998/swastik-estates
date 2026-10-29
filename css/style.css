@@ -3,6 +3,8 @@
    Designed to match layout, colors, typography, and responsive animations
    ========================================================================== */
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap");
+@import url('https://db.onlinewebfonts.com/c/7f235e181b54d5fd6e725cda31d493de?family=BreveNews');
+
 
 :root {
   --color-navy-dark: #06092a;
@@ -26,7 +28,13 @@
   /* 
         --hero-heading-font: "Archivo Black", sans-serif;
     --heading-font: "Oswald", sans-serif;
-    --sub-heading-font: "Open Sans", sans-serif; */
+ --sub-heading-font: "Open Sans", sans-serif; */
+}
+
+@font-face {
+  font-family: "BreveNews-Bold";
+  src: url("./fonts/BreveNews-Bold.otf") format("opentype");
+  font-weight: 700;
 }
 
 /* Base Styles */
@@ -191,7 +199,7 @@ h4 {
   align-items: center;
   background-color: #010238;
   overflow: hidden;
-  padding: 8rem 0 6rem 0;
+  padding: 4rem 0 4rem 0;
 }
 
 /* Desktop Only */
@@ -230,16 +238,58 @@ h4 {
   z-index: 2;
 }
 
+.hero-logo-wrapper {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.hero-center-logo {
+  height: 150px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: inline-block;
+
+  filter: drop-shadow(0 6px 20px rgba(255, 193, 7, 0.35))
+    drop-shadow(0 4px 15px rgba(0, 0, 0, 0.7));
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+
+  /* Continuous Zoom */
+  animation: logoZoom 3.5s ease-in-out infinite;
+}
+
+@keyframes logoZoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.hero-center-logo:hover {
+  transform: scale(1.12);
+  filter: drop-shadow(0 8px 25px rgba(255, 193, 7, 0.55))
+    drop-shadow(0 4px 18px rgba(0, 0, 0, 0.8));
+}
+
 .hero-brand-block {
   text-align: left;
   padding-left: 2rem;
 }
 
 .hero-title-main {
-  font-family: var(--font-heading);
+  font-family: "BreveNews-Bold" !important;
   font-size: 77px;
-  font-weight: 900;
+  /* font-weight: 900; */
   letter-spacing: 4px;
+  margin-top: 20px;
   line-height: 1.05;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
@@ -265,8 +315,7 @@ h4 {
 
   animation: heroTitleFlash 5s linear infinite;
 
-  filter:
-    drop-shadow(0 2px 3px rgba(0, 0, 0, 0.8))
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.8))
     drop-shadow(0 6px 15px rgba(0, 0, 0, 0.45));
 }
 
@@ -280,7 +329,7 @@ h4 {
   }
 }
 
-.hero-subtitle-clean {
+/* .hero-subtitle-clean {
   font-family: var(--sub-heading-font);
   font-size: 21px;
   font-weight: 100;
@@ -288,6 +337,49 @@ h4 {
   color: #cbd5e1;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
+} */
+
+.hero-subtitle-clean {
+  width: 800px;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+
+  font-family: var(--sub-heading-font);
+  font-size: 21px;
+  font-weight: 100;
+  padding: 20px 0;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.separator {
+  margin: 0 10px;
+}
+
+.location {
+  margin: 0 8px;
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: locationMarquee 28s linear infinite;
+}
+
+.marquee-text {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+@keyframes locationMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* Hero Social Icons Row using icons from img/social-icon */
@@ -1080,6 +1172,12 @@ textarea.form-control-dark.is-valid {
   body {
     overflow-x: clip !important;
   }
+  .hero-center-logo {
+    height: 85px;
+  }
+  .hero-logo-wrapper {
+    margin-bottom: 1rem;
+  }
   .hero-title-main {
     font-size: 3.8rem;
     letter-spacing: 2px;
@@ -1114,7 +1212,7 @@ textarea.form-control-dark.is-valid {
     font-size: 1.9rem;
   }
   .hero-subtitle-clean {
-    font-size: 0.88rem;
+    font-size: 18px;
   }
   .area-img {
     height: 190px;
