@@ -186,12 +186,19 @@ h4 {
    ========================================================================== */
 .hero-section {
   position: relative;
-  min-height: 680px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  background-color: #010238; /* Navy Blue Base */
+  background-color: #010238;
   overflow: hidden;
   padding: 8rem 0 6rem 0;
+}
+
+/* Desktop Only */
+@media (min-width: 992px) {
+  .hero-section {
+    min-height: 100vh;
+  }
 }
 
 /* Exact geometric cut from screenshot: Navy on left & top/bottom, Pure Black < cut from right */
@@ -199,12 +206,20 @@ h4 {
   position: absolute;
   inset: 0;
   background-color: #000000;
-  clip-path: polygon(
+  /* clip-path: polygon(
     65% 0%,
     35% 50%,
     65% 100%,
     100% 100%,
     100% 0%
+  ); */
+  clip-path: polygon(
+    100% 0%,
+    100% 48%,
+    100% 100%,
+    48.2% 100%,
+    25% 60.5%,
+    60.5% 0
   );
   z-index: 1;
   pointer-events: none;
@@ -375,6 +390,7 @@ h4 {
 
 /* Realistic Building Signboard Overlay matching shared layout */
 .firm-signboard-banner {
+  display: none;
   position: absolute;
   top: 25%;
   left: 50%;
@@ -437,9 +453,9 @@ h4 {
   font-weight: 300;
 }
 .btn-outline-custom {
-    font-size: 1.2rem;
-    font-family: var(--sub-heading-font);
-    font-weight: 500;
+  font-size: 1.2rem;
+  font-family: var(--sub-heading-font);
+  font-weight: 500;
   color: var(--color-accent-blue);
   border: 2px solid var(--color-accent-blue);
   background: transparent;
@@ -845,8 +861,8 @@ textarea.form-control-dark.is-valid {
   padding: 0.6rem 1rem;
   border-radius: 30px;
   color: #e2e8f0;
-    font-size: 20px;
-    font-style: italic;
+  font-size: 20px;
+  font-style: italic;
   font-weight: 500;
   transition: var(--transition-smooth);
 }
@@ -1023,12 +1039,12 @@ textarea.form-control-dark.is-valid {
 }
 
 @media (max-width: 767.98px) {
-       html,
-    body {
-        overflow-x: clip !important;
-    }
+  html,
+  body {
+    overflow-x: clip !important;
+  }
   .hero-title-main {
-  font-size: 3rem;
+    font-size: 3rem;
     letter-spacing: 2px;
   }
   .hero-social-img {
